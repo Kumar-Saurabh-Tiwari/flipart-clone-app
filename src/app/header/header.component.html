@@ -1,0 +1,31 @@
+<header>
+    <div class="p-5 flex flex-wrap justify-center md:justify-between">
+        <a href="#" class="flex-shrink-0">
+            <img src="../../../assets/explore-plus.svg" class="w-36 md:w-44" alt="">
+        </a>
+        <div class="flex flex-grow items-center h-12 mt-1 rounded-lg bg-[aliceblue] mx-2 md:mx-7 md:w-auto w-full">
+            <img src="../../../assets/search-icon.png" class="w-7 h-7 ml-2 md:mx-5" alt="">
+            <input type="text" 
+                   class="ml-2 bg-[aliceblue] border-none text-base md:text-lg h-8 rounded-lg w-full md:w-[700px] focus:outline-none" 
+                   [(ngModel)]="searchTerm" 
+                   (keyup)="search($event)" 
+                   placeholder="Search for Products, Brands and More">
+        </div>
+        <div class="flex flex-wrap justify-end items-center mt-4 md:mt-0">
+            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" href="#">
+                <img src="../../../assets/profile-icon.svg" class="w-6 md:w-7 mr-1" alt=""> Login
+            </a>
+            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" routerLink="cart">
+                <img src="../../../assets/header_cart.svg" class="w-6 md:w-7 mr-1" alt=""> 
+                <span *ngIf="totalItem" class="text-xs rounded-full badge bg-red-600">{{totalItem}}</span> Cart
+            </a>
+            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" href="#">
+                <img src="../../../assets/became-seller.svg" class="w-6 md:w-7 mr-1" alt=""> Become a Seller
+            </a>
+            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" href="#">
+                <img src="../../../assets/three-dots.svg" class="w-6 md:w-7" alt="">
+            </a>
+        </div>
+    </div>
+    <hr>
+</header>
