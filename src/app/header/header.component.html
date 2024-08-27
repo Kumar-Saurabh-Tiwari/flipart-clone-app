@@ -5,27 +5,36 @@
         </a>
         <div class="flex flex-grow items-center h-12 mt-1 rounded-lg bg-[aliceblue] mx-2 md:mx-7 md:w-auto w-full">
             <img src="../../../assets/search-icon.png" class="w-7 h-7 ml-2 md:mx-5" alt="">
-            <input type="text" 
-                   class="ml-2 bg-[aliceblue] border-none text-base md:text-lg h-8 rounded-lg w-full md:w-[700px] focus:outline-none" 
-                   [(ngModel)]="searchTerm" 
-                   (keyup)="search($event)" 
-                   placeholder="Search for Products, Brands and More">
+            <input type="text"
+                class="ml-2 bg-[aliceblue] border-none text-base md:text-lg h-8 rounded-lg w-full md:w-[700px] focus:outline-none"
+                [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search for Products, Brands and More">
         </div>
         <div class="flex flex-wrap justify-end items-center mt-4 md:mt-0">
-            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" href="#">
-                <img src="../../../assets/profile-icon.svg" class="w-6 md:w-7 mr-1" alt=""> Login
+            <!-- Login Link -->
+            <a routerLink="login" routerLinkActive="active-tab"
+                class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center">
+                <img src="../../../assets/profile-icon.svg" class="w-6 md:w-7 mr-1" alt="Login Icon">
+                Login
             </a>
-            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" routerLink="cart">
-                <img src="../../../assets/header_cart.svg" class="w-6 md:w-7 mr-1" alt=""> 
-                <span *ngIf="totalItem" class="text-xs rounded-full badge bg-red-500 p-1 text-white">{{totalItem}}</span> Cart
+            <!-- Cart Link -->
+            <a routerLink="cart" routerLinkActive="active-tab"
+                class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center">
+                <img src="../../../assets/header_cart.svg" class="w-6 md:w-7 mr-1" alt="Cart Icon">
+                <span *ngIf="totalItem"
+                    class="text-xs rounded-full badge bg-red-500 p-1 text-white">{{totalItem}}</span>
+                Cart
             </a>
-            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" href="#">
-                <img src="../../../assets/became-seller.svg" class="w-6 md:w-7 mr-1" alt=""> Become a Seller
+            <!-- Become a Seller Link -->
+            <a href="#" class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center">
+                <img src="../../../assets/became-seller.svg" class="w-6 md:w-7 mr-1" alt="Become a Seller Icon">
+                Become a Seller
             </a>
-            <a class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center" href="#">
-                <img src="../../../assets/three-dots.svg" class="w-6 md:w-7" alt="">
+            <!-- More Options Link -->
+            <a href="#" class="mr-4 text-sm md:text-lg text-gray-800 no-underline flex items-center">
+                <img src="../../../assets/three-dots.svg" class="w-6 md:w-7" alt="More Options Icon">
             </a>
         </div>
+
     </div>
     <hr>
 </header>

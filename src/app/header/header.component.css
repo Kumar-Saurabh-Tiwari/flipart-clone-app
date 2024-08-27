@@ -1,3 +1,14 @@
 input:focus {
     outline: none;
 }
+
+.active-tab {
+    @apply bg-blue-500 text-white py-2 px-4 rounded-md; 
+
+    border-radius: 5px;
+
+    img {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    }
+}
+
